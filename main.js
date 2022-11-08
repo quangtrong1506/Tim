@@ -262,6 +262,9 @@ function view(canvas) {
 view(document.getElementById('pinkboard'));
 
 function randomColor() {
-    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    var a = Math.floor(Math.random() * 16777215);
+    while (a < 6000000) a = Math.floor(Math.random() * 16777215);
+    console.log(a)
+    var randomColor = a.toString(16);
     return '#' + randomColor;
 }
